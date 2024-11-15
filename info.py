@@ -43,28 +43,28 @@ CODE = (environ.get('CODE', 'https://graph.org/file/02e7ecc3e2693b481b914.jpg'))
 REFER_PICS = (environ.get("REFER_PICS", "https://graph.org/file/1c1a3cb814cd719ae3bd3.jpg https://graph.org/file/1a2e64aee3d4d10edd930.jpg")).split()
 
 #stream link shortner
-STREAM_SITE = (environ.get('STREAM_SITE', 'shareus.io'))
+STREAM_SITE = (environ.get('STREAM_SITE', ''))
 STREAM_API = (environ.get('STREAM_API', ''))
-STREAMHTO = (environ.get('STREAMHTO', 'https://t.me/How_to_Download_7x/32'))
+STREAMHTO = (environ.get('STREAMHTO', ''))
 
 # Command
 COMMAND_HAND_LER = environ.get("COMMAND_HAND_LER", "/")
 PREFIX = environ.get("PREFIX", "/")
 
-CHAT_GROUP = int(environ.get("CHAT_GROUP", "-1001953724858"))
+CHAT_GROUP = int(environ.get("CHAT_GROUP", "-1002329322641"))
 
 # Admins, Channels & Users
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '6964538561').split()]
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '1002198886089 1002238603343').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '1002238603343 1002198886089').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 PREMIUM_USER = [int(user) if id_pattern.search(user) else user for user in environ.get('PREMIUM_USER', '').split()]
-auth_channel = environ.get('AUTH_CHANNEL', '') #Channel / Group Id for force sub ( make sure bot is admin )
+auth_channel = environ.get('AUTH_CHANNEL', '1002238603343') #Channel / Group Id for force sub ( make sure bot is admin )
 auth_grp = environ.get('AUTH_GROUP')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 AUTH_GROUPS = [int(ch) for ch in auth_grp.split()] if auth_grp else None
 support_chat_id = environ.get('SUPPORT_CHAT_ID', '-1002329322641') # support group id ( make sure bot is admin )
-reqst_channel = environ.get('REQST_CHANNEL_ID', '-1002282029638') # request channel id ( make sure bot is admin )
+reqst_channel = environ.get('REQST_CHANNEL_ID', '1002400133611') # request channel id ( make sure bot is admin )
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 NO_RESULTS_MSG = bool(environ.get("NO_RESULTS_MSG", False)) # True if you want no results messages in Log Channel
@@ -93,16 +93,16 @@ REFERAL_COUNT = int(environ.get('REFERAL_COUNT', '20')) # number of referal coun
 REFERAL_PREMEIUM_TIME = environ.get('REFERAL_PREMEIUM_TIME', '1 week')
 OWNER_USERNAME = environ.get('OWNER_USERNAME', 'sewxiy') # owner username without @
 
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002162182935')) #Log channel id ( make sure bot is admin )
-DUMP_CHNL = int(environ.get('DUMP_CHNL', '-1002282029638'))
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '')) #Log channel id ( make sure bot is admin )
+DUMP_CHNL = int(environ.get('DUMP_CHNL', ''))
 
 # Verify
 VERIFY = bool(environ.get('VERIFY', False)) # Verification On ( True ) / Off ( False )
 HOWTOVERIFY = environ.get('HOWTOVERIFY', 'https://t.me/How_to_Download_7x/26') # How to open tutorial link for verification
 
 # Others
-SHORTLINK_URL = environ.get('SHORTLINK_URL', 'shareus.io')
-SHORTLINK_API = environ.get('SHORTLINK_API', '1Jh0re6olVUHnr3eEyFG7NZX7RF3')
+SHORTLINK_URL = environ.get('SHORTLINK_URL', '')
+SHORTLINK_API = environ.get('SHORTLINK_API', '')
 IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 MAX_B_TN = environ.get("MAX_B_TN", "5")
@@ -116,7 +116,7 @@ S_CHANNEL = environ.get('S_CHANNEL', "RM_Movie_Flix")
 GRP_LNK = environ.get('GRP_LNK', 'https://t.me/RM_Movie_Request')
 CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/RM_Movie_Flix')
 TUTORIAL = environ.get('TUTORIAL', '') # Tutorial video link for opening shortlink website 
-IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
+IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', False))
 MSG_ALRT = environ.get('MSG_ALRT', 'ᴍᴀɪɴᴛᴀɪɴᴇᴅ ʙʏ : ᴄᴏᴅᴇғʟɪx ʙᴏᴛs')
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'https://t.me/RM_Support_Group') #Support group link ( make sure bot is admin )
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
@@ -136,9 +136,9 @@ MELCOW_NEW_USERS = is_enabled((environ.get('MELCOW_NEW_USERS', "True")), True)
 PROTECT_CONTENT = is_enabled((environ.get('PROTECT_CONTENT', "True")), True)
 PUBLIC_FILE_STORE = is_enabled((environ.get('PUBLIC_FILE_STORE', "True")), True)
 
-LANGUAGES = ["malayalam", "", "tamil", "", "english", "", "hindi", "", "telugu", "", "kannada", "", "gujarati", "", "marathi", "", "punjabi", ""]
+LANGUAGES = ["malayalam", "", "tamil", "", "english", "", "hindi", "", "bangla", "", "telugu", "", "kannada", "", "gujarati", "", "marathi", "", "punjabi", ""]
 
-SEASONS = ["season 1" , "season 2" , "season 3" , "season 4", "season 5" , "season 6" , "season 7" , "season 8" , "season 9" , "season 10"]
+SEASONS = "season 1" , "season 2" , "season 3" , "season 4", "season 5" , "season 6" , "season 7" , "season 8" , "season 9" , "season 10"]
 
 QUALITIES = ["360P", "", "480P", "", "720P", "", "1080P", "", "1440P", "", "2160P", ""]
 
